@@ -1,0 +1,35 @@
+.container {
+	height: 500px;
+	margin-top: 10px;
+	width: 300px;
+	border: 1px solid black;
+	overflow-y: scroll;
+}
+
+.virtual-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.virtual {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.item {
+	text-align: center;
+	border: 1px solid;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.item span {
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+  font-size: 12px;
+}
