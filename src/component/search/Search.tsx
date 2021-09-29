@@ -28,18 +28,6 @@ export const Search = () => {
     const refItem = useRef<any>();
     let datasource: any = repoList;
 
-    const handleObserver = useCallback((entries) => {
-        const target = entries[0];
-        // isIntersecting: 監聽的底部div 是否出現在畫面上
-        // hasMore 確認有更多資料
-        // loading 判斷前一個requst已經結束才再次呼叫
-        if (target.isIntersecting && hasMore && !loading) {
-            ref.current = setTimeout(() => {
-                setPage((prev) => prev + 1);
-            }, 1000);
-        }
-    }, []);
-
     useEffect(() => {
         // 更換關鍵字
         if (!!keywords) {
